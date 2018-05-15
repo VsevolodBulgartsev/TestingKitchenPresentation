@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Aqua
 
 ### A GitPitch Presentation Template
@@ -118,3 +119,12 @@ http.createServer(function (request, response) {
 ### <span class="white">Get your presentation started!</span>
 ### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/aqua)
 
+=======
+#asds
+## asdad
+#FFECB3 
+
+- asdas
+- asdasd
+- asdasd
+>>>>>>> 233f2099d64fd703a6713c9db2c04bee369f5514
