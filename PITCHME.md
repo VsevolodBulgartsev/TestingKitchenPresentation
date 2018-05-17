@@ -25,16 +25,15 @@
 
 ---
 ## Знакомство со средсвами автоматизированного тестирования
-![alt text](https://i.imgur.com/S8hn2Kd.jpg "Logo Title Text 1")
 +++
 <!-- .slide: data-transition="none" -->
-![1](image=https://i.imgur.com/S8hn2Kd.jpg)
+![1](https://i.imgur.com/S8hn2Kd.jpg)
 +++
 <!-- .slide: data-transition="none" -->
-![2](image=assets/image/2.jpg)
+![2](assets/image/2.jpg)
 +++
 <!-- .slide: data-transition="none" -->
-![3](image=assets/image/3.png)
+![3](assets/image/3.png)
 +++
 <!-- .slide: data-transition="none" -->
 ![4](image=assets/image/4.png)
