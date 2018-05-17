@@ -27,16 +27,19 @@
 ## Знакомство со средсвами автоматизированного тестирования
 +++
 <!-- .slide: data-transition="none" -->
-![1](https://i.imgur.com/S8hn2Kd.jpg)
+![1](assets/image/1.jpg)
 +++
 <!-- .slide: data-transition="none" -->
 ![2](assets/image/2.jpg)
 +++
 <!-- .slide: data-transition="none" -->
-![3](assets/image/3.png)
+![3](assets/image/3.jpg)
 +++
 <!-- .slide: data-transition="none" -->
-![4](image=assets/image/4.png)
+![4](assets/image/4.jpg)
++++
+<!-- .slide: data-transition="none" -->
+![5](assets/image/5.jpg)
 +++
 
 ---?code=sample/go/server.go&lang=golang&title=Golang File
