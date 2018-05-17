@@ -27,7 +27,7 @@
 ## Знакомство со средсвами автоматизированного тестирования
 +++
 <!-- .slide: data-transition="none" -->
-![1](image=assets/image/1.jpg)
+![1](image=https://i.imgur.com/S8hn2Kd.jpg)
 +++
 <!-- .slide: data-transition="none" -->
 ![2](image=assets/image/2.jpg)
