@@ -6,12 +6,18 @@
  */
 
 body {
-  /* fallback for old browsers */
-  background: #74ebd5;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, #acb6e5, #74ebd5);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, #acb6e5, #74ebd5);
+  background: #000;
+  background-color: #000;
+}
+
+html:-webkit-full-screen-ancestor {
+  background: #000;
+  background-color: #000;
+}
+
+html:-moz-full-screen-ancestor {
+  background: #000;
+  background-color: #000;
 }
 
 .reveal pre {
@@ -23,13 +29,12 @@ body {
   font-size: 1.2em;
   line-height: 1.2;
   max-height: 60vh !important;
-  opacity: 0.95;
   border-radius: 10px;
 }
 
 .reveal .slides section .code-presenting-annotation {
   color: white;
-  background: #acb6e5;
+  background: #1f1c18;
   padding: 1px 15px;
   border-radius: 15px;
   opacity: 0.75 !important;
@@ -38,13 +43,11 @@ body {
 
 .reveal p span.slide-title {
   color: white;
-  background: #8fd0db;
   padding: 4px 15px;
   opacity: 0.75 !important;
   border-radius: 15px;
   display: none;
 }
-
 .reveal div.left {
     float: left;
     z-index: -10;
@@ -61,13 +64,13 @@ body {
     font-size: 0.5em;
 }
 
+.hljs {
+  background : none;
+}
+
 #gp-logo img {
   max-height: 2em;
   max-width: none;
-}
-
-.white {
-  color: white;
 }
 
 .gp-tip { font-size : 1.5em; }
