@@ -121,6 +121,6 @@ Note:
 4 Запуск headless Chrome на контейнере докера всё на том же маке - оочень быстрый. А установка - 3 не длинные команды докеру и немножечко кода.
 ---
 
-### Вопросы?
+## Вопросы?
 ---
-!(http://memesmix.net/media/created/xlqpog.jpg)
+![](http://memesmix.net/media/created/xlqpog.jpg)
