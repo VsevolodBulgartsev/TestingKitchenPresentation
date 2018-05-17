@@ -1,17 +1,19 @@
-<<<<<<< HEAD
-# Aqua
+# Знакомство с кухней тестировщиков
 
-### A GitPitch Presentation Template
+### или интересное путешествие в пучину хаоса
 
 ---
 
-## Tips!
+## Основные тезисы
 
 <br>
 
-@fa[arrows gp-tip](Press F to go Fullscreen)
-
-@fa[microphone gp-tip](Press S for Speaker Notes)
+- Зачем нужны логи тестирования
+- Цели и средсва
+- Знакомство со средсвами автоматизированного тестирования
+- Понимание проведени автотестирования "на кошках"
+- Попытка "увидеть" сделанное
+- "Готовим" логи правильно или "Почему ReportPortal"
 
 ---
 
@@ -102,7 +104,7 @@ http.createServer(function (request, response) {
 
 ---
 
-### Questions?
+### Вопросы?
 
 <br>
 
