@@ -5,8 +5,8 @@
 ---
 ### Основные тезисы
 - Зачем нужны логи тестирования |
-- Цели и средсва |
-- Понимание проведения автотестирования "на кошках" |
+- Цели и средства |
+- Понимание автотестирования "на кошках" |
 - Попытка "увидеть" сделанное |
 - "Готовим" логи правильно или "Почему ReportPortal" |
 - Камушки |
@@ -22,9 +22,9 @@ Note:
 
 Помогаем владельцам продукта, руководству проекта получить оценку рисков того, что ПО поведёт себя не так, как ожидается. Мы оцениваем, насколько компании и пользователям будет хуже, если мы выпустим продукт определённой баговости.
 ---
-## Цели и средсва
+## Цели и средства
 - Начать составлять историю багов как часть видения прогресса продукта |
-- Найти и понять, какие из средст самые популярные, модные, эфективные |
+- Найти и понять, какие из средств самые популярные, модные, эффективные |
 
 Note:
 
@@ -40,116 +40,85 @@ Note:
 Все эти дальнейшие результаты делались с большой помощью Руслана, Магжана (ненастоящий), Санжара, и тесты там ещё очень сильно не работали по внутренним причинам (у тестировщиков лапки).
 +++
 <!-- .slide: data-transition="none" -->
-![1](assets/image/1.jpg)
+![1](https://i.imgur.com/tkCtfFO.png)
 
 Note:
 
 Вот это вот то, что мне сразу не понравилось - sufefire - выглядит совсем не очень, и каждый раз надо куда-то это пересохранять накаплаивающиеся результаты. Сразу думал как Иван будет писать скрипт чтобы они куда-то складывались, датировались... Гемор тот ещё.
 +++
 <!-- .slide: data-transition="none" -->
-![2](assets/image/2.jpg)
+![2](https://i.imgur.com/lQKIVrq.png)
 
 Note:
 
 А вот это выглядело интересно - allure - графики по моему всегда более наглядны чем сухие цыферки. Хоть настоящих логов вы и не писали, но уже какое-то приятное ощущение было. Хотя с историей отчётов - та же беда.
 +++
 <!-- .slide: data-transition="none" -->
-![3](assets/image/3.jpg)
+![3](https://i.imgur.com/I3KOYMB.png)
 
 Note:
 
 Вот что-то такое, для меня ещё совсем не понятное также было найдено гуглом, но что, я ещё не знал что это и как. (ReportPortal)
----?code=sample/go/server.go&lang=golang&title=Golang File
+---
+## Попытка "увидеть" сделанное
 
-@[1,3-6](Present code found within any repo source file.)
-@[8-18](Without ever leaving your slideshow.)
-@[19-28](Using GitPitch code-presenting with (optional) annotations.)
+!(https://i.imgur.com/RRQxBxH.jpg)
+
+Note:
+
+Как уже писал выше - мы не приблизились к цели, написал тесты для API, потому что результаты этих тестов не были видны. Очень хорошим свойством качественных отчётов - быстрота понимания результатов. И это мне стало понятно, после того, как я посмотрел как работает ReportPortal.
 
 ---
+## "Готовим" логи правильно или "Почему ReportPortal"
+#### Что я понял сразу:
+- ReportPortal ставится локально, наши логи не летят на сторону
+- Умеет в историю логов
+- Фришный
+- Выглядит "красиво"
 
-@title[JavaScript Block]
+Note: 
 
-<p><span class="slide-title">JavaScript Block</span></p>
+Поспрашивав на канале тестировщиков про сохранение отчётов мне посоветовали глянуть этот РепортПортал. Начал гуглить и в целом вырисовывалась красивая картинка удобного инструмента. Я окунулся в понимание как его запустить и внедрить.
+---
+#### Что я узнал позже:
+- Поднимается на модном Docker-е |
+- Легко интегрируется в проект |
+- Помогает анализировать баги |
 
-```javascript
-// Include http module.
-var http = require("http");
+Note: 
 
-// Create the server. Function passed as parameter
-// is called on every request made.
-http.createServer(function (request, response) {
-  // Attach listener on end event.  This event is
-  // called when client sent, awaiting response.
-  request.on("end", function () {
-    // Write headers to the response.
-    // HTTP 200 status, Content-Type text/plain.
-    response.writeHead(200, {
-      'Content-Type': 'text/plain'
-    });
-    // Send data and end response.
-    response.end('Hello HTTP!');
-  });
+Первое что я понял, это то, что он поднимается в докере. Слышал от Ивана и Санжара только лестное о докере я начал (тут многие сомневаются что это было необходимо) изучение этого инструмента. Окунулся в мир китов, контейнеров, образов... Было весело и интересно.
+Спустя определённое время я таки поднял этот чудо-портал и смог на него залогинится.
 
-// Listen on the 8080 port.
-}).listen(8080);
-```
-
-@[1,2](You can present code inlined within your slide markdown too.)
-@[9-17](Displayed using code-syntax highlighting just like your IDE.)
-@[19-20](Again, all of this without ever leaving your slideshow.)
-
----?gist=onetapbeyond/494e0fecaf0d6a2aa2acadfb8eb9d6e8&lang=scala&title=Scala GIST
-
-@[23](You can even present code found within any GitHub GIST.)
-@[41-53](GIST source code is beautifully rendered on any slide.)
-@[57-62](And code-presenting works seamlessly for GIST too, both online and offline.)
+С интеграцией как обычно не обошлось без сеньоров программистов, которые с радостью помогли мне сначала прицепить наш проект к порталу, выводить результат, но только негативные
+После этого мы уже смогли настроить именно логировать, используя специальнообученными инструментами, видя ответы успешных и не успешных тестов.
 
 ---
-
-## Template Help
-
-- [Code Presenting](https://github.com/gitpitch/gitpitch/wiki/Code-Presenting)
-  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides) 
-- [Custom CSS Styling](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS)
-- [Slideshow Background Image](https://github.com/gitpitch/gitpitch/wiki/Background-Setting)
-- [Slide-specific Background Images](https://github.com/gitpitch/gitpitch/wiki/Image-Slides#background)
-- [Custom Logo](https://github.com/gitpitch/gitpitch/wiki/Logo-Setting), [TOC](https://github.com/gitpitch/gitpitch/wiki/Table-of-Contents), and [Footnotes](https://github.com/gitpitch/gitpitch/wiki/Footnote-Setting)
-
+картинка нашего портала с запусками апитестера
 ---
+### Анализ багов
 
-## Go GitPitch Pro!
+картинка нашего портала с анализом
 
-<br>
-<div class="left">
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"> </i><br>
-    <a href="https://gitpitch.com/pro-features" class="pro-link">
-    More details here.</a>
-</div>
-<div class="right">
-    <ul>
-        <li>Private Repos</li>
-        <li>Private URLs</li>
-        <li>Password-Protection</li>
-        <li>Image Opacity</li>
-        <li>SVG Image Support</li>
-    </ul>
-</div>
+Note:
 
+Работая с порталом очень приятно было оценить "фичу" которую сделали разработчики портала, а именно разбор и анализ багов. Сначала, они все помечаются меткой - к расследованию. Расследую баги мы можем их пометить как системнуый баг - это например не было доступа к базе, файлу, не было сети и т.п., есть баги продукта - это когда ПО ведёт себя не по ожидаемому сценарию и мои самые любимые - баги автоматизации - это когда программимимисты тестов что-то сделали не так. Помечая можно писать коменты, и там ещё есть интеграция с жирой - можно будет сразу создавать задачи по исправлению багов, и надюсь там есть разделение - задача для исправления продукта или задача исправления теста.
+---
+## Камушки, камни, валуны.
+- Докер для девопсов.
+- Докер не может в обычную винду, только серверную подавай
+- Докер не очень может в встарые ноутбуки Mac
+- Докер очень помогает. когда инструменты грамотно организованы
+!(https://cdn-images-1.medium.com/max/2000/1*Jzq9440V4uEzs4nTg2apXg.png)
+
+Note:
+
+1 Это не простая штука дял всех, как Жира, и наверно чуть сложнее (и опаснее) чем работа с Гитлабом
+2 Сначала был удивлён, но изучая то, как работает докер, стало яснопонятно
+3 Ну да, но попробовать стоило
+4 Запуск headless Chrome на контейнере докера всё на том же маке - оочень быстрый. А установка - 3 не длинные команды докеру и немножечко кода.
 ---
 
 ### Вопросы?
-
-<br>
-
-@fa[twitter gp-contact](@gitpitch)
-
-@fa[github gp-contact](gitpitch)
-
-@fa[medium gp-contact](@gitpitch)
-
----?image=assets/image/gitpitch-audience.jpg
-
-@title[Download this Template!]
-
-### <span class="white">Get your presentation started!</span>
-### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/aqua)
+---
+!(http://memesmix.net/media/created/xlqpog.jpg)
