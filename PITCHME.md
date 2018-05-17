@@ -25,6 +25,7 @@
 
 ---
 ## Знакомство со средсвами автоматизированного тестирования
+![alt text](https://i.imgur.com/S8hn2Kd.jpg "Logo Title Text 1")
 +++
 <!-- .slide: data-transition="none" -->
 ![1](image=https://i.imgur.com/S8hn2Kd.jpg)
